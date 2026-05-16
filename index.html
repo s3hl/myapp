@@ -35,8 +35,8 @@
     ダウンロード
   </a>
 
-  <!-- ★ たった1行で「終了」動作を実現 ★ -->
-  <button onclick="window.history.back()"
+  <!-- ★ Gmail WebView 対策：close() + back() の併用 ★ -->
+  <button onclick="window.close(); window.history.back();"
           style="
             display: block;
             margin: 40px auto 0;
