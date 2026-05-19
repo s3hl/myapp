@@ -32,26 +32,20 @@
        border-radius: 10px;
        text-decoration: none;
        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-       margin-bottom: 20px;
+       margin-bottom: 30px;
      ">
     ダウンロード
   </a>
 
-  <!-- 折りたたみ式 QRコード表示 -->
-  <details style="margin-top: 20px;">
-    <summary style="font-size: 16px; cursor: pointer; color: #333;">
-      📷 QRコードで開きたい方はこちら（タップして表示）
-    </summary>
-    <div style="margin-top: 15px;">
-      <!-- ここにQRコード画像ファイルを置く（例：qr_gomachan.png） -->
-      <img src="qr_gomachan.png"
-           alt="ごまちゃんアプリ ダウンロード用QRコード"
-           style="width: 200px; height: 200px;">
-      <p style="font-size: 14px; color: #555; margin-top: 10px;">
-        別の端末でこのQRコードを読み取ると、このページを開くことができます。
-      </p>
-    </div>
-  </details>
+  <!-- QRコード（最初から表示） -->
+  <div style="margin-top: 20px;">
+    <img src="qr_gomachan.png"
+         alt="ごまちゃんアプリ ダウンロード用QRコード"
+         style="width: 200px; height: 200px;">
+    <p style="font-size: 14px; color: #555; margin-top: 10px;">
+      別の端末でこのQRコードを読み取ると、このページを開くことができます。
+    </p>
+  </div>
 
   <!-- 終了ボタン（Gmail WebView 対策版） -->
   <button onclick="window.close(); window.history.back();"
