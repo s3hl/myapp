@@ -19,22 +19,24 @@
         radial-gradient(at 100% 100%, #dcfce7 0px, transparent 50%);
       background-attachment: fixed;
       color: #1f2937;
-      /* 上が空きすぎる問題を解決するため、上下中央揃えを廃止して上から配置 */
-      /* 右がはみ出す問題を防ぐため、左右に安全な余白(16px)を確保 */
+      /* 上の空きを40pxの固定値にし、左右はスマホ用に16pxの安全な余白を確保 */
       padding: 40px 16px; 
       line-height: 1.5;
+      display: block; /* Flexによる予期せぬ配置ズレを防止 */
     }
 
     /* サイズを抑えたコンパクトなカード */
     .card {
       background-color: #ffffff;
-      /* width: 100% の強制を解除し、margin: auto で自然に中央配置させる */
       max-width: 340px;
-      margin: 0 auto; 
+      margin: 0 auto; /* 確実に左右中央に配置 */
       border-radius: 16px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.8);
+      /* 長い文字列による画面幅の超過・右寄せ化を防止 */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
 
     /* ヘッダー：装飾を追加してリッチな印象に */
@@ -46,7 +48,6 @@
       position: relative;
     }
 
-    /* ヘッダー背景のさりげない円形アクセント */
     .card-header::before {
       content: "";
       position: absolute;
@@ -82,7 +83,7 @@
       z-index: 1;
       border: 1px solid rgba(255, 255, 255, 0.3);
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      backdrop-filter: blur(4px); /* 背景を少しぼかす効果 */
+      backdrop-filter: blur(4px);
     }
 
     .subtitle {
@@ -119,6 +120,8 @@
       text-align: left;
       margin-bottom: 24px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      /* URL等が入力された場合でも強制的に改行させてレイアウト崩れを防ぐ */
+      word-break: break-all; 
     }
 
     /* ダウンロードボタン：物理ボタン風の強い立体感 */
@@ -139,7 +142,6 @@
       font-weight: bold;
       border-radius: 10px;
       text-decoration: none;
-      /* 押し込める物理ボタンのような影 */
       box-shadow: 0 4px 0 #047857, 0 8px 16px rgba(5, 150, 105, 0.3);
       transition: all 0.1s ease-in-out;
     }
