@@ -5,79 +5,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>簡単アイコン変更のダウンロード</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: sans-serif; margin: 0; padding: 20px;
+           background-color: #f7f7f7; color: #333; }
+    .card { max-width: 480px; margin: 0 auto; text-align: center; }
+    .site-name { font-size: 20px; color: #4CAF50; margin: 0 0 4px; }
+    .subtitle { font-size: 22px; margin: 0 0 12px; color: #333; }
+    .lead { font-size: 15px; color: #555; margin: 0 0 16px; }
+    .description { padding: 12px 16px; background-color: #fff;
+                   border: 1px solid #e0e0e0; border-radius: 8px;
+                   font-size: 14px; color: #555; text-align: left;
+                   line-height: 1.6; margin: 0 auto 20px; }
+    .update-date { font-size: 13px; color: #777; margin: 0 0 24px; }
+    .download-btn { display: block; width: 100%; max-width: 320px;
+                    margin: 0 auto 16px; background-color: #4CAF50;
+                    color: white; padding: 15px 24px; font-size: 18px;
+                    border-radius: 10px; text-decoration: none;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                    transition: background-color 0.2s; }
+    .download-btn:hover { background-color: #43A047; }
+    .manual-btn { display: block; width: 100%; max-width: 320px;
+                  margin: 0 auto 28px; background-color: #607D8B;
+                  color: white; padding: 12px 24px; font-size: 15px;
+                  border-radius: 10px; text-decoration: none;
+                  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+                  transition: background-color 0.2s; }
+    .manual-btn:hover { background-color: #546E7A; }
+    .qr { width: 100%; max-width: 200px; height: auto; }
+    .qr-note { font-size: 13px; color: #555; margin-top: 10px; }
+    .close-btn { display: block; margin: 40px auto 0; padding: 12px 24px;
+                 font-size: 15px; border-radius: 8px; border: none;
+                 background-color: #888; color: white; cursor: pointer; }
+    @media (max-width: 480px) {
+      .subtitle { font-size: 20px; }
+      .download-btn { font-size: 17px; padding: 14px 20px; }
+    }
+  </style>
 </head>
-
-<body style="font-family: sans-serif; text-align: center; padding: 20px; background-color: #f7f7f7;">
-
-  <!-- サイト名（ブランド） -->
-  <h1 style="font-size: 22px; color: #4CAF50; margin-bottom: 4px;">
-    🤖 爺AI アプリ
-  </h1>
-
-  <!-- サブタイトル -->
-  <h2 style="font-size: 24px; margin-bottom: 10px; color: #333;">
-    簡単アイコン変更のダウンロード
-  </h2>
-
-  <p style="font-size: 16px; color: #555; margin-bottom: 15px;">
-    下のボタンを押すとアプリをダウンロードできます。
-  </p>
-
-  <!-- アプリ説明欄（空なら下の区間ごと削除される） -->
-  <!--DESC_START-->
-  <div style="max-width: 400px; margin: 0 auto 20px; padding: 12px;
-              background-color: #fff; border: 1px solid #e0e0e0;
-              border-radius: 8px; font-size: 14px; color: #555;
-              text-align: left; line-height: 1.6;">
-    OSで変更できないなら試す価値あり
+<body>
+  <div class="card">
+    <h1 class="site-name">🤖 爺AI アプリ</h1>
+    <h2 class="subtitle">簡単アイコン変更のダウンロード</h2>
+    <p class="lead">下のボタンを押すとアプリをダウンロードできます。</p>
+    <!--DESC_START-->
+    <div class="description">
+      OSで変更できないなら試す価値あり
+    </div>
+    <!--DESC_END-->
+    <p class="update-date">更新日：2026-07-23</p>
+    <a href="https://github.com/s3hl/myapp/releases/download/2026-07-23-225830/WizFile64.exe" class="download-btn">ダウンロード</a>
+    <!--MANUAL_START-->
+    <a href="https://github.com/s3hl/myapp/releases/download/2026-07-23-225830/manual.pdf" class="manual-btn">📖 説明書（PDF）を見る</a>
+    <!--MANUAL_END-->
+    <div>
+      <img src="qr_myapp.png"
+           alt="爺AI アプリ ダウンロード用QRコード" class="qr">
+      <p class="qr-note">
+        別の端末でこのQRコードを読み取ると、このページを開くことができます。
+      </p>
+    </div>
+    <button onclick="window.close(); window.history.back();" class="close-btn">
+      終了する
+    </button>
   </div>
-  <!--DESC_END-->
-
-  <!-- 更新日はツールが自動で書き換え -->
-  <p style="font-size: 14px; color: #777; margin-bottom: 30px;">
-    更新日：2026-07-23
-  </p>
-
-  <!-- ダウンロードボタン -->
-  <a href="{{APP_FILE}}" download
-     style="
-       display: inline-block;
-       background-color: #4CAF50;
-       color: white;
-       padding: 14px 28px;
-       font-size: 18px;
-       border-radius: 10px;
-       text-decoration: none;
-       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-       margin-bottom: 30px;
-     ">
-    ダウンロード
-  </a>
-
-  <!-- QRコード -->
-  <div style="margin-top: 20px;">
-    <img src="qr_myapp.png"
-         alt="爺AI アプリ ダウンロード用QRコード"
-         style="width: 200px; height: 200px;">
-    <p style="font-size: 14px; color: #555; margin-top: 10px;">
-      別の端末でこのQRコードを読み取ると、このページを開くことができます。
-    </p>
-  </div>
-
-  <!-- 終了ボタン（Gmail WebView 対策版） -->
-  <button onclick="window.close(); window.history.back();"
-          style="
-            display: block;
-            margin: 40px auto 0;
-            padding: 12px 24px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: none;
-            background-color: #888;
-            color: white;
-          ">
-    終了する
-  </button>
-
 </body>
 </html>
